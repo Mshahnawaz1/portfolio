@@ -1,0 +1,42 @@
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        .section {
+            padding-top: 4rem;
+            padding-bottom: 4rem;
+        }
+
+        /* Additional styles for Markdown content */
+        .markdown-body h1 {
+            font-size: 2.25rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            margin-top: 2rem;
+        }
+
+        .markdown-body h2 {
+            font-size: 1.875rem;
+            font-weight: 600;
+            margin-bottom: 0.75rem;
+            margin-top: 1.5rem;
+        }
+
+        .markdown-body p {
+            margin-bottom: 1rem;
+            line-height: 1.75;
+        }
+
+        .markdown-body ul,
+        .markdown-body ol {
+            list-style-type: disc;
+            margin-left: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .markdown-body img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 0.5rem;
+            margin: 1.5rem 0;
+        }
