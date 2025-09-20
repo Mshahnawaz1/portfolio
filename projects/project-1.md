@@ -2,7 +2,7 @@
 
 ## Overview
 This project applies unsupervised machine learning techniques to analyze customer data from an e-commerce platform. The goal is to identify distinct customer groups based on their purchasing behavior, which can then be used for targeted marketing campaigns and personalized product recommendations.
-
+![lol](images/rimuru.png)
 ## What it does
 - **Data Cleaning and Preprocessing:** Handles missing values and normalizes numerical features.
 - **K-Means Clustering:** Applies the K-Means algorithm to segment customers into meaningful clusters. The Elbow Method is used to determine the optimal number of clusters.
