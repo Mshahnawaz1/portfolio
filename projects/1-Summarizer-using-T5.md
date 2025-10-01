@@ -1,66 +1,37 @@
-# 📝 Text Summarizer using T5-Small  
+# 📌 Text Summarization using T5 Model
 
-**Tech Stack**: *Natural Language Processing (NLP), PyTorch, Transformers (Hugging Face), Flask, Python*
-
-- **Transformers (Hugging Face)**
-- **Flask**
-- **Python**
-- **HTML / CSS / Bootstrap**
-- **Gunicorn / Deployment Tools**
+## 🚀 Project Summary
+This project implements a **state-of-the-art abstractive text summarizer** capable of handling extremely long documents using the **T5 (Text-to-Text Transfer Transformer)** model.  
+The core innovation is a **custom preprocessing pipeline** that intelligently chunks long texts with **25-word redundancy**, ensuring contextual flow and generating a **coherent, unified summary**.
 
 ---
 
-## 📖 Project Overview  
-This project is a **Text Summarization Web App** powered by the **T5-small** transformer model.  
-The goal is to take long text inputs (articles, documents, or paragraphs) and generate a concise and meaningful summary.  
+## ⚙️ Detailed Working & Methodology
+- **Challenge:** T5 has a fixed context window, limiting input length.  
+- **Solution:** Developed a custom pipeline:
+  1. **Preprocessing & Cleaning** of raw input text.  
+  2. **Intelligent Chunking** → For documents >350 words, split into smaller segments.  
+  3. **25-word Overlap (Redundancy)** → Each chunk retains part of the previous section for contextual integrity.  
+  4. **Sequential Summarization** → T5 summarizes each chunk independently.  
+  5. **Final Synthesis** → Concatenate partial summaries into one cohesive output.  
 
-Unlike extractive summarization, which simply picks sentences from the original text, the **T5-small model** is trained for **abstractive summarization**, meaning it generates new sentences that capture the essence of the input.  
-
----
-
-## 🔑 Key Features
-- **Interactive Web Interface**: Built with Flask and styled using HTML/CSS/Bootstrap.  
-- **Transformer Model**: Utilizes Hugging Face’s pre-trained **T5-small** model for summarization.  
-- **Customizable Input**: Accepts any text input from users.  
-- **Lightweight Deployment**: Optimized for CPU-friendly environments using a smaller transformer variant.  
-- **REST API Support**: Backend can also serve summaries via an API endpoint for integration with other apps.  
+This approach maintains **semantic cohesion** across long documents while staying within model limits.
 
 ---
 
-## ⚙️ How It Works
-1. User enters a long piece of text into the web app.  
-2. The Flask backend passes the text to the **T5-small** model (loaded via Hugging Face Transformers).  
-3. The model generates a summary using **PyTorch inference**.  
-4. The summarized text is displayed on the frontend in real-time.  
+## 🛠️ Technical Stack & Tools
+
+| Category        | Technology                           | Purpose                                                 |
+|-----------------|--------------------------------------|---------------------------------------------------------|
+| **Core AI**     | T5 Transformer, PyTorch/TensorFlow   | Abstractive summarization & deep learning foundation    |
+| **NLP Pipeline**| Python, Hugging Face, NLTK/SpaCy     | Tokenization, text preprocessing, and model inference   |
+| **Deployment**  | Flask / Streamlit (Optional)         | Web interface for user interaction                      |
 
 ---
 
-## 🛠️ Deployment
-- Deployed using **Flask + Gunicorn**.  
-- Can be hosted on cloud platforms such as **Heroku, AWS, or Render**.  
-- Lightweight design ensures smooth performance even on free-tier hosting.  
+## 🎯 Key Learnings & Engineering Takeaways
+- **Practical LLM Engineering**: Designed a strategy to bypass context window limitations using overlapping chunks.  
+- **ML Pipeline Development**: Built a full summarization pipeline, covering preprocessing, inference, and synthesis.  
+- **Context Preservation**: Demonstrated how redundancy in text segmentation can ensure semantic flow in long-document summarization.  
 
 ---
-
-## 📸 Demo Preview
-*(Screenshots or GIFs of the web app UI can be added here)*  
-
----
-
-## 💡 Learning Outcomes
-- Hands-on experience with **transformer models** (T5-small).  
-- Model deployment using **Flask**.  
-- Bridging NLP models with a **user-friendly web interface**.  
-- Understanding trade-offs between model size, inference speed, and accuracy.  
-
----
-
-## 🔮 Future Improvements
-- Add support for **multiple summarization models** (e.g., BART, Pegasus).  
-- Provide options for **summary length control**.  
-- Create a **browser extension** for one-click summarization of web articles.  
-- Add **user authentication** to save and track summaries.  
-
----
-
-✨ **This project combines NLP, deep learning, and full-stack deployment — showcasing how AI models can be made accessible through simple web applications.**
