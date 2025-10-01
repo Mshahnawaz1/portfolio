@@ -4,17 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MShahnawaz</title>
-    <!-- Tailwind CSS with custom dark mode configuration -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
-          darkMode: 'class',
+            darkMode: 'class',
         }
     </script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <!-- Marked.js for Markdown parsing -->
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
     <link rel="stylesheet" href="index.css">
     <style>
@@ -25,18 +23,18 @@
           background: linear-gradient(to bottom right, #ea580c, #c2410c, #b91c1c);
         }
         .bg-grid-light {
-          background-image: 
+          background-image:
             linear-gradient(to right, rgba(229, 231, 235, 0.8) 1px, transparent 1px),
             linear-gradient(to bottom, rgba(209, 213, 219, 0.8) 1px, transparent 1px);
           background-size: 30px 30px;
         }
         .bg-grid-dark {
-          background-image: 
+          background-image:
             linear-gradient(to right, rgba(75, 85, 99, 0.3) 1px, transparent 1px),
             linear-gradient(to bottom, rgba(75, 85, 99, 0.3) 1px, transparent 1px);
           background-size: 30px 30px;
         }
-        
+
         /* Grid overlay that can be applied to sections */
         .grid-overlay::before {
           content: '';
@@ -45,42 +43,30 @@
           left: 0;
           right: 0;
           bottom: 0;
-          background-image: 
+          background-image:
             linear-gradient(to right, rgba(229, 231, 235, 0.5) 1px, transparent 1px),
             linear-gradient(to bottom, rgba(209, 213, 219, 0.5) 1px, transparent 1px);
           background-size: 40px 40px;
           pointer-events: none;
           z-index: -1;
         }
-        
+
         .dark .grid-overlay::before {
-          background-image: 
+          background-image:
             linear-gradient(to right, rgba(75, 85, 99, 0.2) 1px, transparent 1px),
             linear-gradient(to bottom, rgba(75, 85, 99, 0.2) 1px, transparent 1px);
         }
-        
+
         .grid-overlay > * {
           position: relative;
           z-index: 1;
         }
-    </style>
-</head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MShahnawaz</title>
-    <!-- Tailwind CSS with custom dark mode configuration -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-          darkMode: 'class',
+        
+        .section {
+            padding-top: 5rem;
+            padding-bottom: 5rem;
         }
-    </script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <!-- Marked.js for Markdown parsing -->
-    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
-    <link rel="stylesheet" href="index.css">
+    </style>
 </head>
 <body class="bg-gray-100 dark:bg-gray-900 text-gray-800 dark:text-gray-200 leading-relaxed transition-colors duration-300">
     <header class="bg-white dark:bg-gray-800 sticky top-0 z-50 shadow-md transition-colors duration-300">
@@ -88,15 +74,15 @@
             <a href="#" class="text-xl font-bold text-gray-900 dark:text-gray-100">M Shahnawaz</a>
             <ul class="flex space-x-6 items-center">
                 <li><a href="#about" class="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition duration-300">About</a></li>
+                <li><a href="#education" class="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition duration-300">Education</a></li>
+                <li><a href="#certifications" class="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition duration-300">Certifications</a></li>
                 <li><a href="#projects" class="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition duration-300">Projects</a></li>
                 <li><a href="#contact" class="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition duration-300">Contact</a></li>
                 <li>
                     <button id="theme-toggle" class="p-2 rounded-full text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 transition duration-300">
-                        <!-- Sun icon -->
                         <svg id="sun-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
                             <path d="M12 2.25a.75.75 0 0 1 .75.75v2.25a.75.75 0 0 1-1.5 0V3a.75.75 0 0 1 .75-.75ZM7.584 7.21a.75.75 0 0 0-.002 1.06L9.166 9.94a.75.75 0 0 0 1.06-1.06l-1.583-1.584a.75.75 0 0 0-1.058.002ZM16.67 7.144a.75.75 0 0 0 1.057 0l1.581-1.58a.75.75 0 1 0-1.057-1.06l-1.581 1.58a.75.75 0 0 0 0 1.06ZM12 5.25a.75.75 0 0 1 .75.75v.75a.75.75 0 0 1-1.5 0V6a.75.75 0 0 1 .75-.75ZM18.75 12a.75.75 0 0 0 0 1.5h2.25a.75.75 0 0 0 0-1.5h-2.25ZM2.25 12a.75.75 0 0 0 0 1.5h2.25a.75.75 0 0 0 0-1.5H2.25ZM4.21 16.67a.75.75 0 0 0 0 1.057l1.58 1.581a.75.75 0 1 0 1.06-1.057l-1.58-1.581a.75.75 0 0 0-1.06 0ZM15.94 18.258a.75.75 0 0 0-1.06 1.06l1.584 1.582a.75.75 0 0 0 1.06-1.06l-1.583-1.583a.75.75 0 0 0-.001-.001ZM12 18.75a.75.75 0 0 0 .75.75v2.25a.75.75 0 0 0-1.5 0v-2.25a.75.75 0 0 0 .75-.75ZM12 10a2 2 0 1 0 0 4 2 2 0 0 0 0-4Z" />
                         </svg>
-                        <!-- Moon icon -->
                         <svg id="moon-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6 hidden">
                             <path fill-rule="evenodd" d="M9.548 1.485A.75.75 0 0 1 10.5 1.5h3a.75.75 0 0 1 .952-.735C16.914 1.464 19 4.314 19 7.5a.75.75 0 0 1-1.5 0c0-2.316-1.875-4.253-4.226-4.485a.75.75 0 0 1-.736-.952ZM8.63 2.924A.75.75 0 0 1 9.54 3.49l1.64 2.846a.75.75 0 0 1-1.299.75l-1.64-2.846a.75.75 0 0 1 .74-.585ZM4.5 10.5a.75.75 0 0 1 .75-.75h2.25a.75.75 0 0 1 0 1.5H5.25a.75.75 0 0 1-.75-.75ZM18.75 10.5a.75.75 0 0 1-.75.75h-2.25a.75.75 0 0 1 0-1.5h2.25a.75.75 0 0 1 .75.75ZM6.51 15.36a.75.75 0 0 1 .74.585l1.64 2.846a.75.75 0 0 1-1.299.75l-1.64-2.846a.75.75 0 0 1 .585-.74ZM14.46 15.656a.75.75 0 0 1 1.06 0l1.583 1.583a.75.75 0 0 1-1.06 1.06l-1.583-1.583a.75.75 0 0 1 0-1.06ZM12 18.75a.75.75 0 0 1 .75.75v2.25a.75.75 0 0 1-1.5 0v-2.25a.75.75 0 0 1 .75-.75ZM12 12a6 6 0 1 0 0 12 6 6 0 0 0 0-12Z" clip-rule="evenodd" />
                         </svg>
@@ -107,42 +93,54 @@
     </header>
 
     <main>
-        <!-- Hero Section -->
         <section class="section bg-gradient-to-r from-blue-500 to-purple-600 dark:from-gray-950 dark:to-gray-800 text-white text-center transition-colors duration-300">
             <div class="container mx-auto px-6">
                 <h1 class="text-5xl md:text-6xl font-bold mb-4">Hi! I am <strong>M.Shahnawaz</strong></h1>
-                <p class="text-xl md:text-2xl mb-8">A passionate developer focused on creating amazing things.</p>
+                <p class="text-xl md:text-2xl mb-8">A curious Engineer exploring the worth of </p>
                 <a href="#projects" class="inline-block bg-white text-blue-600 font-semibold py-3 px-8 rounded-full shadow-lg hover:bg-gray-100 dark:hover:bg-gray-200 transition duration-300">View My Work</a>
             </div>
         </section>
 
-        <!-- About Me Section -->
         <section id="about" class="section relative grid-overlay">
             <div class="container mx-auto px-6">
                 <h2 class="text-3xl font-bold text-center mb-8">About Me</h2>
                 <div class="md:flex items-center space-y-6 md:space-y-0 md:space-x-12">
                     <div class="md:w-1/3 flex justify-center">
-                        <!-- Placeholder image for your photo -->
-                        <img src="images/rimuru.png" alt="Profile Photo" class="w-full md:w-64 h-auto md:h-64 rounded-full shadow-lg border-4 border-white dark:border-gray-700">
+                        <img src="static/rimuru.png" alt="Profile Photo" class="w-full md:w-64 h-auto md:h-64 rounded-full shadow-lg border-4 border-white dark:border-gray-700">
                     </div>
                     <div class="md:w-2/3">
                         <p class="text-lg mb-4">
-                            Write a brief and compelling summary about yourself. Talk about your passion for technology, the languages you love, and the kind of problems you enjoy solving. This is your chance to tell your story and show some personality.
-                        </p>
+                            A curious Engineer building projects on **natural language processing**, **Computer vision** and **web development**. I love to learn new technologies and explore new domains. I am passionate about solving real-world problems using technology.
                         <p class="text-lg">
-                            Mention your key skills, for example: Python (Flask, Django), JavaScript (React), HTML, CSS, Machine Learning, etc. This helps recruiters quickly understand your expertise.
+                            <strong>Skills:</strong> Python (Flask, Django), JavaScript (React), HTML, CSS, Machine Learning, etc. This helps recruiters quickly understand your expertise.
                         </p>
+                        <div class="md:w-1/3 flex justify-center mt-5">
+                        <a href="static/Mshahnawaz.pdf" download class="inline-block bg-blue-600 dark:bg-purple-600 text-white font-semibold py-2 px-6 rounded-full shadow-lg hover:bg-blue-700 dark:hover:bg-purple-700 transition duration-300 text-sm">
+                            Download Resume
+                        </a>
                     </div>
+
                 </div>
             </div>
         </section>
 
-        <!-- Projects Section -->
+        
+        
         <section id="projects" class="section relative grid-overlay">
             <div class="container mx-auto px-6">
                 <h2 class="text-3xl font-bold text-center mb-8">My Projects</h2>
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <!-- Project 1 -->
+                    <div class="bg-white dark:bg-gray-700 p-6 rounded-lg shadow-md hover:shadow-xl transition duration-300">
+                        <h3 class="text-xl font-bold mb-2">Text summarizer with T5 model</h3>
+                        <p class="text-gray-600 dark:text-gray-300 mb-4">A text summarization tool that leverages the T5 model to generate concise summaries of long articles.</p>
+                        <ul class="flex flex-wrap gap-2 text-sm text-gray-500 mb-4">
+                            <li class="bg-gray-100 dark:bg-gray-800 dark:text-gray-400 px-2 py-1 rounded-full">Python</li>
+                            <li class="bg-100 dark:bg-gray-800 dark:text-gray-400 px-2 py-1 rounded-full">NLP</li>
+                            <li class="bg-gray-100 dark:bg-gray-800 dark:text-gray-400 px-2 py-1 rounded-full">Flask</li>
+                            <li class="bg-gray-100 dark:bg-gray-800 dark:text-gray-400 px-2 py-1 rounded-full">Huggingface</li>
+                        </ul>
+                        <button onclick="showProjectDetails('1-Summarizer-using-T5')" class="text-blue-600 dark:text-purple-400 hover:underline">View Details &rarr;</button>
+                    </div>
                     <div class="bg-white dark:bg-gray-700 p-6 rounded-lg shadow-md hover:shadow-xl transition duration-300">
                         <h3 class="text-xl font-bold mb-2">Irrigo</h3>
                         <p class="text-gray-600 dark:text-gray-300 mb-4"><strong>Irrigo</strong> is a smart irrigation system that optimizes water usage for plants based on soil moisture levels, temperature, humidity and weather forecasts.</p>
@@ -153,18 +151,6 @@
                         </ul>
                     <button onclick="showProjectDetails('project-1')" class="text-blue-600 dark:text-purple-400 hover:underline">View Details &rarr;</button>
                     </div>
-                    <!-- Project 2 -->
-                    <div class="bg-white dark:bg-gray-700 p-6 rounded-lg shadow-md hover:shadow-xl transition duration-300">
-                        <h3 class="text-xl font-bold mb-2">Project Title 2</h3>
-                        <p class="text-gray-600 dark:text-gray-300 mb-4">A brief description of your project. Explain what it does, what problem it solves, and why you built it.</p>
-                        <ul class="flex flex-wrap gap-2 text-sm text-gray-500 mb-4">
-                            <li class="bg-gray-100 dark:bg-gray-800 dark:text-gray-400 px-2 py-1 rounded-full">JavaScript</li>
-                            <li class="bg-100 dark:bg-gray-800 dark:text-gray-400 px-2 py-1 rounded-full">React</li>
-                            <li class="bg-gray-100 dark:bg-gray-800 dark:text-gray-400 px-2 py-1 rounded-full">CSS</li>
-                        </ul>
-                        <button onclick="showProjectDetails('1-Summarizer-using-T5')" class="text-blue-600 dark:text-purple-400 hover:underline">View Details &rarr;</button>
-                    </div>
-                    <!-- Project 3 -->
                     <div class="bg-white dark:bg-gray-700 p-6 rounded-lg shadow-md hover:shadow-xl transition duration-300">
                         <h3 class="text-xl font-bold mb-2">Project Title 3</h3>
                         <p class="text-gray-600 dark:text-gray-300 mb-4">A brief description of your project. Explain what it does, what problem it solves, and why you built it.</p>
@@ -179,15 +165,49 @@
             </div>
         </section>
 
-        <!-- Dynamic Project Details Section -->
-        <section id="project-details" class="section hidden markdown-body">
+        <section id="project-details" class="section hidden markdown-body relative grid-overlay">
             <div class="container mx-auto px-6" id="project-details-container">
-                <!-- Markdown content will be injected here by JavaScript -->
+            </div>
+        </section>
+<!-- Education section -->
+        <section id="education" class="section relative grid-overlay">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl font-bold text-center mb-12">Education 🎓</h2>
+                <div class="max-w-3xl mx-auto space-y-10">
+                    <div class="bg-white dark:bg-gray-700 p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300">
+                        <h3 class="text-2xl font-semibold text-blue-600 dark:text-purple-400 mb-1">Bachelor of Technology in Computer Science</h3>
+                        <p class="text-lg font-medium text-gray-700 dark:text-gray-300">Your University Name</p>
+                        <p class="text-md text-gray-500 dark:text-gray-400 mt-1">2018 — 2022 | **GPA:** 8.5/10</p>
+                        <ul class="list-disc list-inside text-gray-600 dark:text-gray-300 mt-4 space-y-1">
+                            <li>Relevant Coursework: Data Structures & Algorithms, Artificial Intelligence, Database Management.</li>
+                            <li>Final Year Project: Developed a complete **Smart Irrigation System (Irrigo)**.</li>
+                        </ul>
+                    </div>
+                    <div class="bg-white dark:bg-gray-700 p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300">
+                        <h3 class="text-2xl font-semibold text-blue-600 dark:text-purple-400 mb-1">High School / Pre-University Education</h3>
+                        <p class="text-lg font-medium text-gray-700 dark:text-gray-300">Your School/College Name</p>
+                        <p class="text-md text-gray-500 dark:text-gray-400 mt-1">2016 — 2018 | **Score:** 90%</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Certifications Section -->
+        <section id="certifications" class="section relative grid-overlay">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl font-bold text-center mb-12">Certifications & Courses 📜</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                    <div class="bg-white dark:bg-gray-700 p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300 flex flex-col justify-between">
+                        <div>
+                            <h3 class="text-xl font-bold mb-2">Cs50's Introduction to Artificial Intelligence</h3>
+                            <p class="text-gray-600 dark:text-gray-300 mb-3">**Provider:** Harvard University</p>
+                            <p class="text-sm text-gray-500 dark:text-gray-400">Mastered foundational concepts of natural language processing, backpropagation, and TensorFlow and other AI concepts.</p>
+                        </div>
+                        <a href="[https://certificates.cs50.io/aefc714b-17b7-493a-af64-ff2b37b8d873.pdf?size=letter]" target="_blank" class="mt-4 text-sm font-semibold text-blue-600 dark:text-purple-400 hover:underline self-start">View Credential &rarr;</a>
+                    </div>
             </div>
         </section>
 
-        <!-- Contact Section -->
-        <section id="contact" class="section bg-gray-200 dark:bg-gray-800 transition-colors duration-300">
+        <section id="contact" class="section relative grid-overlay">
             <div class="container mx-auto px-6">
                 <h2 class="text-3xl font-bold text-center mb-8">Get In Touch</h2>
                 <div class="max-w-xl mx-auto text-center">
@@ -206,7 +226,7 @@
 
     <footer class="bg-gray-800 dark:bg-gray-950 text-gray-300 dark:text-gray-400 text-center py-6 transition-colors duration-300">
         <div class="container mx-auto px-6">
-            <p>&copy; 2025 Your Name. All rights reserved.</p>
+            <p>&copy; 2025 MShahnawaz. All rights reserved.</p>
         </div>
     </footer>
 
